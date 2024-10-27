@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todolist.css">
+    <title>My To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <h2>To-Do List</h2>
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <button id="addBtn" class="add-button">Add</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="taskList">
+            </tbody>
+        </table>
+
+        <div class="settings-container">
+            <div class="controls">
+                <label for="bgcolor">Background Color: </label>
+                <select id="bgcolor">
+                    <option value="white">White</option>
+                    <option value="lightpink">Light Pink</option>
+                    <option value="lightblue">Light Blue</option>
+                    <option value="lightgreen">Light Green</option>
+                </select>
+
+                <label for="fontsize">Font Size:</label>
+                <input type="range" id="fontsize" min="12" max="36" value="16">
+
+                <label for="fontstyle">Font Style:</label>
+                <select id="fontstyle">
+                    <option value="Arial, sans-serif">Default</option>
+                    <option value="Georgia, serif">Serif (Georgia)</option>
+                    <option value="Times New Roman, serif">Times New Roman</option>
+                </select>
+            </div>
+            <button id="toggleDarkMode" class="add-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+    </div>
+
+    <script src="todolist.js"></script>
+</body>
+</html>
